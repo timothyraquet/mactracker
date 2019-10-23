@@ -7,14 +7,13 @@ import { TableListComponent } from '../../table-list/table-list.component';
 import { TreemapComponent} from '../../treemap/treemap.component';
 import { IconsComponent } from '../../icons/icons.component';
 import {MatSliderModule} from '@angular/material/slider';
-
 import {
   MatButtonModule,
   MatInputModule,
   MatRippleModule,
   MatFormFieldModule,
   MatTooltipModule,
-  MatSelectModule
+  MatSelectModule,
 } from '@angular/material';
 @NgModule({
   imports: [
@@ -28,7 +27,7 @@ import {
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
-    MatSliderModule
+    MatSliderModule,
   ],
   declarations: [
     TableListComponent,

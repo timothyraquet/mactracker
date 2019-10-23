@@ -14,6 +14,12 @@ public class TestEndpointsController {
         return ResponseEntity.ok("test endpoint");
     }
 
+    @GetMapping(value = "/getTreeArray", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity getTreeArray() {
+        // Access Service here - service will most likely be connected to JPA Repository or however you guys want to connect to DB
+        return ResponseEntity.ok("Got tree array");
+    }
+
 //    @PostMapping("/putmappinghere")
 //    public ResponseEntity<Object> postExample(@RequestBody String postExample) {
 //        // Access Service here - service will be connected to JPA Repository
