@@ -42,6 +42,7 @@ export class TreemapComponent implements OnInit {
     }
 
     treeClicked($event) {
+
         let currentTreeValue = $event;
     }
 

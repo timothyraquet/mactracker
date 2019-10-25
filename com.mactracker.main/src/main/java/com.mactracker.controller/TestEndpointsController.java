@@ -1,6 +1,7 @@
 package com.mactracker.controller;
 
 import com.mactracker.model.Query;
+import com.mactracker.model.TreeDataStorage_1;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,8 +12,9 @@ import org.springframework.web.bind.annotation.*;
 public class TestEndpointsController {
     @GetMapping(value = "/testEndpoint", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity testEndpoint() {
+        TreeDataStorage_1 treeDataStorage_1 = new TreeDataStorage_1();
         // Access Service here - service will most likely be connected to JPA Repository or however you guys want to connect to DB
-        return ResponseEntity.ok("test endpoint");
+        return ResponseEntity.ok(treeDataStorage_1.treeMapHashMap);
     }
 
 
