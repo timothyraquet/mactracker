@@ -1,5 +1,6 @@
 package com.mactracker.controller;
 
+import com.mactracker.model.Query;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,12 @@ public class TestEndpointsController {
     public ResponseEntity testEndpoint() {
         // Access Service here - service will most likely be connected to JPA Repository or however you guys want to connect to DB
         return ResponseEntity.ok("test endpoint");
+    }
+
+
+    @PostMapping(value = "/query", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity queryEndpoint(@RequestBody Query query) {
+        return ResponseEntity.ok(query);
     }
 
     @GetMapping(value = "/getTreeArray", produces = MediaType.APPLICATION_JSON_VALUE)
